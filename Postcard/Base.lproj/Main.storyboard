@@ -46,25 +46,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDi-t4-1mb">
+                                <rect key="frame" x="77" y="77" width="436" height="76"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="27" y="72" width="332" height="76"/>
+                                </variation>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AlbertEinsteinStamp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="4pb-YL-DtU">
                                 <rect key="frame" x="341" y="167" width="172" height="126"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="200" y="176" width="171" height="117"/>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sp5-fO-ZuF">
-                                <rect key="frame" x="77" y="248" width="256" height="45"/>
-                                <color key="backgroundColor" red="1" green="0.63030767620000006" blue="0.2820429491" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Send Message">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="212" width="176" height="45"/>
-                                </variation>
-                                <connections>
-                                    <action selector="sendMessageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bLQ-KP-MBd"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ih6-fF-iwO">
                                 <rect key="frame" x="77" y="306" width="436" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -81,22 +77,46 @@
                                     <rect key="frame" x="16" y="339" width="355" height="30"/>
                                 </variation>
                             </textField>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDi-t4-1mb">
-                                <rect key="frame" x="77" y="77" width="436" height="76"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKg-Zm-t5E">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="27" y="72" width="332" height="76"/>
+                                    <rect key="frame" x="16" y="188" width="176" height="52"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sp5-fO-ZuF">
+                                <rect key="frame" x="77" y="248" width="256" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.63030767620000006" blue="0.2820429491" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Send Message">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="248" width="176" height="45"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sendMessageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bLQ-KP-MBd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="QKg-Zm-t5E"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="QKg-Zm-t5E"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="enterMessageField" destination="5gc-YO-dYa" id="FbU-1A-3G9"/>
-                        <outlet property="enterNameField" destination="5gc-YO-dYa" id="CSV-MG-fyP"/>
+                        <outlet property="enterNameField" destination="Ih6-fF-iwO" id="cGV-N1-5JI"/>
                         <outlet property="messageLabel" destination="FDi-t4-1mb" id="8xh-L2-kSf"/>
+                        <outlet property="nameLabel" destination="QKg-Zm-t5E" id="6nm-wN-ZEA"/>
                         <outlet property="sendMessageButton" destination="sp5-fO-ZuF" id="WZV-LY-k2A"/>
                     </connections>
                 </viewController>
